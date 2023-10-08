@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import PlantList from "../Components/PlantList";
 import PlantItem from "../Components/PlantItem";
 import PlantDetails from "../Components/PlantDetails";
+import FavouritePlants from "../Components/FavouritePlants";
 
 const PlantContainer = () => {
     const [plants, setPlants] = useState([]);
@@ -25,12 +26,26 @@ const PlantContainer = () => {
     // console.log("use effect working") - workinh
     }, []);
 
+    //
+    const handleFavPlants = (index) => {
+        const updatedPlants = plants.map((plant) => {
+            return plant.index === index
+            ? {...plant, isFavourite: !plant.isFavourite}
+            : plant
+        })
+        setPlants(updatedPlants)
+    }
+
     return (
         <>
             <p>Select a plant:</p>
             {plants ? (<PlantList plants={plants} onPlantSelected={onPlantSelected} />) : null}
             
             {selectedPlant ? <PlantDetails plant={selectedPlant} /> : null}
+
+            <br></br>
+
+            <FavouritePlants plants={plants} onPlantSelected={handleFavPlants}/>
         </>
     );
 };
