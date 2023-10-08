@@ -5,7 +5,7 @@ import PlantContainer from './Containers/PlantContainer'
 function App() {
   return (
     <>
-      <h1>Testing Testing 123- App Works!</h1>
+      <h1>Plant Dictionary</h1>
       <PlantContainer/>
     </>
   )
