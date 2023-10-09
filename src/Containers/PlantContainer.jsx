@@ -10,7 +10,8 @@ const PlantContainer = () => {
   const [selectedPlant, setSelectedPlant] = useState(null);
 
   const getPlants = function () {
-    fetch("https://perenual.com/api/species-list?key=sk-9LOQ6522a4ef3416f2382")
+    fetch("https://perenual.com/api/species-list?key=sk-yU4T6523bcdce08c42382")
+    //old key: sk-9LOQ6522a4ef3416f2382")
       .then((res) => res.json())
       .then((plants) => {
         setPlants(plants.data);
