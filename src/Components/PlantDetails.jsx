@@ -6,7 +6,7 @@ const PlantDetails = ({ plant, onFavouriteSelect }) => {
   }
 
   const handleClick = () => {
-    onFavouriteSelect(plant.index);
+    onFavouriteSelect(plant.id); //has no index --> passing undef
   };
 
   const favouriteBtnText = plant.isFavourite

@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <h1>Plant Dictionary</h1>
-      <PlantContainer/>
+      <PlantContainer/> {/* inserts everything from plantContainer */}
     </>
   )
 }

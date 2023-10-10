@@ -9,29 +9,30 @@ const PlantContainer = () => {
   const [plants, setPlants] = useState([]);
   const [selectedPlant, setSelectedPlant] = useState(null);
 
-  const getPlants = function () {
+  const getPlants = function () { //fetches the API
     fetch("https://perenual.com/api/species-list?key=sk-yU4T6523bcdce08c42382")
     //old key: sk-9LOQ6522a4ef3416f2382")
-      .then((res) => res.json())
+      .then((res) => res.json()) //res= response
       .then((plants) => {
         setPlants(plants.data);
       })
       .catch((error) => console.log(`error: loading data; ${error}`));
   };
 
-  const onPlantSelected = (index) => {
-    setSelectedPlant(plants[index]); //might be plants?
-  };
-
-  useEffect(() => {
+  useEffect(() => { //need to check EXACTLY what this does!
     getPlants();
     // console.log("use effect working") - workinh
   }, []);
 
-  //
-  const handleFavPlants = (index) => {
+
+  function handlePlantSelected(index) { //sets selected plant- does this mean sets out the info about how it can/will be used?
+    setSelectedPlant(plants[index]); //might be plants?
+  }
+
+  // handles
+  const handleFavPlants = (id) => {
     const updatedPlants = plants.map((plant) => {
-      return plant.index === index
+      return plant.id === id
         ? { ...plant, isFavourite: !plant.isFavourite }
         : plant;
     });
@@ -42,7 +43,7 @@ const PlantContainer = () => {
     <>
       <p>Select a plant:</p>
       {plants ? (
-        <PlantList plants={plants} onPlantSelected={onPlantSelected} />
+        <PlantList plants={plants} onPlantSelected={handlePlantSelected} />
       ) : null}
 
       {selectedPlant ? (
@@ -54,7 +55,8 @@ const PlantContainer = () => {
 
       <br></br>
 
-      <FavouritePlants plants={plants} onPlantSelected={handleFavPlants} />
+      <FavouritePlants plants={plants} onPlantSelected={handleFavPlants} /> 
+        {/* should the second half be handlePlantSelected */}
     </>
   );
 };
