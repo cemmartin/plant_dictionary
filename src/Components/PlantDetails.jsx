@@ -23,7 +23,7 @@ const PlantDetails = ({ plant, onFavouriteSelect }) => {
       {/* <a href={plant["default_image"]["regular_url"]}></a> */}
       <p>Scientific Name: {plant["scientific_name"]}</p>
       <p>Watering: {plant["watering"]}</p>
-      <p>Sunlight: {plant["sunlight"]}</p>
+      <p>Sunlight: {plant["sunlight"].join(", ")}</p>
       <button onClick={handleClick}>{favouriteBtnText}</button>
       {/* added */}
     </>
