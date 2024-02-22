@@ -1,3 +1,4 @@
+import { useState } from "react";
 import FavouritePlants from "./FavouritePlants";
 
 const PlantDetails = ({ plant, onFavouriteSelect }) => {
@@ -5,13 +6,17 @@ const PlantDetails = ({ plant, onFavouriteSelect }) => {
     return null;
   }
 
-  const handleClick = () => {
-    onFavouriteSelect(plant.id); //has no index --> passing undef
-  };
+  const [favourite, setFavourite] = useState(plant.isFavourite)
 
-  const favouriteBtnText = plant.isFavourite
+  const handleClick = () => {
+    onFavouriteSelect(plant.id);
+    setFavourite(!favourite) //has no index --> passing undef
+  }; 
+
+  const favouriteBtnText = favourite
     ? "Remove from favourites"
     : "Add to favourites";
+    // you won't see the change bc dependent on plant (above) which is out of scope
 
   return (
     <>
