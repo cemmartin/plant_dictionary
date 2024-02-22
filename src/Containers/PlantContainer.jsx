@@ -11,7 +11,6 @@ const PlantContainer = () => {
 
   const getPlants = function () { //fetches the API
     fetch("https://perenual.com/api/species-list?key=".concat(import.meta.env.VITE_API_KEY))
-    //old key: sk-9LOQ6522a4ef3416f2382")
       .then((res) => res.json()) //res= response
       .then((plants) => {
         setPlants(plants.data);
