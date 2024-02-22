@@ -19,9 +19,8 @@ const PlantContainer = () => {
       .catch((error) => console.log(`error: loading data; ${error}`));
   };
 
-  useEffect(() => { //need to check EXACTLY what this does!
+  useEffect(() => { //when we want to synchronise the app to something external (make sure everythign syncs up)
     getPlants();
-    // console.log("use effect working") - workinh
   }, []);
 
 
@@ -31,12 +30,12 @@ const PlantContainer = () => {
 
   // handles
   const handleFavPlants = (id) => {
-    const updatedPlants = plants.map((plant) => {
-      return plant.id === id
-        ? { ...plant, isFavourite: !plant.isFavourite }
-        : plant;
+    const updatedPlants = plants.map((plant) => { //creates an array of the plants
+      return plant.id === id //if the id matches...
+        ? { ...plant, isFavourite: !plant.isFavourite } //then add it to the new array; if it's falsey & selected, add it to Favourites (basically do the opposite of what is selected)
+        : plant; //if it's not true just return the plant
     });
-    setPlants(updatedPlants);
+    setPlants(updatedPlants); //sets plants to updated plants
   };
 
   return (
@@ -55,7 +54,7 @@ const PlantContainer = () => {
 
       <br></br>
 
-      <FavouritePlants plants={plants} onPlantSelected={handleFavPlants} /> 
+      <FavouritePlants plants={plants} onPlantSelected={handleFavPlants} />
         {/* should the second half be handlePlantSelected */}
     </>
   );

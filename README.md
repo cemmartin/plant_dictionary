@@ -1,8 +1,10 @@
-# React + Vite
+<h1>Plant Dictionary 🌱</h1>
+I developed this Plant Dictionary using an Perenual's free API! The app teaches the user about a wide variety of plants, displaying to the user information such as the scientific name and watering preferences of a given plant. Users are also able to favourite their preferred plants and remove them from their favourites list.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+To run this application: 
 
-Currently, two official plugins are available:
+Get an API key from https://perenual.com/docs/api
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+After cloning this application and adding the API key, run the following commands in your terminal:
+npm i
+npm run dev
