@@ -14,8 +14,8 @@ const PlantDetails = ({ plant, onFavouriteSelect }) => {
   }; 
 
   const favouriteBtnText = favourite
-    ? "Remove from favourites"
-    : "Add to favourites";
+    ? "Favourite"
+    : "Favourite";
     // you won't see the change bc dependent on plant (above) which is out of scope
 
   return (
