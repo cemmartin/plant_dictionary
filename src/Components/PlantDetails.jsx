@@ -30,6 +30,8 @@ const PlantDetails = ({ plant, onFavouriteSelect }) => {
       <p>Watering: {plant["watering"]}</p>
       <p>Sunlight: {plant["sunlight"].join(", ")}</p>
       <button onClick={handleClick}>{favouriteBtnText}</button>
+      {/* <p>To add or remove a plant from favourites, 
+        <br></br>click the button above.</p> */}
       {/* added */}
     </>
   );

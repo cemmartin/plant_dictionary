@@ -1,5 +1,5 @@
 <h1>Plant Dictionary 🌱</h1>
-I developed this Plant Dictionary using an Perenual's free API! The app teaches the user about a wide variety of plants, displaying to the user information such as the scientific name and watering preferences of a given plant. Users are also able to favourite their preferred plants and remove them from their favourites list.
+I developed this Plant Dictionary using an Perenual's free API! The app teaches the user about a wide variety of plants, displaying to the user information such as the scientific name and watering preferences of a given plant. Users are also able to favourite their preferred plants and remove them from their favourites list using the 'Favourite' button.
 
 
 To run this application: 
