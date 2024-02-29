@@ -1,7 +1,14 @@
 html {
     text-align: center;
     color: darkgreen;
+    /* hex: 023020 */
     background-color: rgb(247, 242, 236);
+    /* hex: f7f2ec  */
+    /* Below is the background you liked but need to place it elsewhere */
+    /* background-color: #f7f2ec;
+    opacity: 0.8;
+    background-image: radial-gradient(#b3c0bc 0.5px, #f7f2ec 0.5px);
+    background-size: 10px 10px;; */
     font-family:'Courier New', Courier, monospace
 
 }
@@ -15,11 +22,15 @@ html {
 }
 
 .favourited-plant {
-    background-color: darkgreen;
-    color: #fff;
+    /* background-color: darkgreen; */
+    background-color: #C2CDC9;
+    color: darkgreen;
+    /* color: #fff; */
     font-family:'Courier New', Courier, monospace;
+    font-weight: 600;
     padding: 5px 10px;
     margin: 5px;
     border: none;
     border-radius: 5px;
+    box-shadow: 10px;;
 }
