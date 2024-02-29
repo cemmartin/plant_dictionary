@@ -4,17 +4,15 @@ const FavouritePlants = ({ plants, onPlantSelected }) => {
   return (
     <>
       <h3>Favourite Plants:</h3>
-      <ul>
         {FavouritePlants.map((plant) => {
           return (
-            <ul key={plant.index}>
+            <div key={plant.index} class="fav-plant-container">
               <button onClick={() => onPlantSelected(plant.index)} class="favourited-plant">
                 {plant["common_name"]}
               </button>
-            </ul>
+            </div>
           );
         })}
-      </ul>
     </>
   );
 };
