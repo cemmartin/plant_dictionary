@@ -32,5 +32,17 @@ html {
     margin: 5px;
     border: none;
     border-radius: 5px;
-    box-shadow: 10px;;
+    box-shadow: 10px;
+}
+
+.favourited-plant-container {
+    /* position: absolute; CANNOT BE ABSOLUTE*/ 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    /* flex-flow: column wrap; STRETCHES THEM TO THE WIDTH OF THE COLUMN */
+    justify-content: space-evenly; 
+        /* the above centres things */
+
+    
 }

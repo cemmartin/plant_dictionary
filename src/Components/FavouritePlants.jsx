@@ -6,7 +6,7 @@ const FavouritePlants = ({ plants, onPlantSelected }) => {
       <h3>Favourite Plants:</h3>
         {FavouritePlants.map((plant) => {
           return (
-            <div key={plant.index} class="fav-plant-container">
+            <div key={plant.index} class="favourited-plant-container">
               <button onClick={() => onPlantSelected(plant.index)} class="favourited-plant">
                 {plant["common_name"]}
               </button>
