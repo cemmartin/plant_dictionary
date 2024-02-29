@@ -7,11 +7,11 @@ const FavouritePlants = ({ plants, onPlantSelected }) => {
       <ul>
         {FavouritePlants.map((plant) => {
           return (
-            <li key={plant.index}>
-              <button onClick={() => onPlantSelected(plant.index)}>
+            <ul key={plant.index}>
+              <button onClick={() => onPlantSelected(plant.index)} class="favourited-plant">
                 {plant["common_name"]}
               </button>
-            </li>
+            </ul>
           );
         })}
       </ul>

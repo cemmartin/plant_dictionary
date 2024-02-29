@@ -14,7 +14,7 @@ const PlantList = ({ plants, onPlantSelected }) => { //going to call onPlantSele
 
     return (
         <>
-            <select id="plantList" name="plantList" onChange={handlePlantSelect}>
+            <select id="plantList" name="plantList" onChange={handlePlantSelect} class="plant-list">
             {PlantDropdown}
             </select>
         </>
