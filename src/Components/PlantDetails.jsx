@@ -29,7 +29,7 @@ const PlantDetails = ({ plant, onFavouriteSelect }) => {
       <p>Scientific Name: {plant["scientific_name"]}</p>
       <p>Watering: {plant["watering"]}</p>
       <p>Sunlight: {plant["sunlight"].join(", ")}</p>
-      <button onClick={handleClick}>{favouriteBtnText}</button>
+      <button onClick={handleClick} class="fav-btn">{favouriteBtnText}</button>
       {/* <p>To add or remove a plant from favourites, 
         <br></br>click the button above.</p> */}
       {/* added */}

@@ -18,8 +18,34 @@ html {
     color: darkgreen;
     font-family:'Courier New', Courier, monospace;
     /* font-weight: bold; */
-    font-weight:500
+    font-weight: 500;
+    padding: 2px 0px;
+    border: 1px darkgreen solid;
+    border-radius: 5px;
 }
+
+button {
+    background-color: #C2CDC9;
+    color: darkgreen;
+    font-family:'Courier New', Courier, monospace;
+    /* font-weight: 600; */
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+}
+/* button:hover {
+    background-color: darkgreen;
+    color: ;
+} */
+.fav-btn {
+    font-weight: 600;
+}
+
+.fav-btn:hover{
+    color: #FFF;
+    background-color: darkgreen;
+}
+
 
 .favourited-plant {
     /* background-color: darkgreen; */
@@ -27,12 +53,19 @@ html {
     color: darkgreen;
     /* color: #fff; */
     font-family:'Courier New', Courier, monospace;
-    font-weight: 600;
+    /* font-weight: 600; */
     padding: 5px 10px;
     margin: 5px;
     border: none;
     border-radius: 5px;
     box-shadow: 10px;
+}
+
+.favourite-plants {
+    /* background-color: pink; */
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 50px;
 }
 
 .favourited-plant-container {

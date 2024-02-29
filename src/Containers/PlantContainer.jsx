@@ -52,9 +52,10 @@ const PlantContainer = () => {
       ) : null}
 
       <br></br>
-
-      <FavouritePlants plants={plants} onPlantSelected={handleFavPlants} />
-        {/* should the second half be handlePlantSelected */}
+        <div class="favourite-plants">
+        <FavouritePlants plants={plants} onPlantSelected={handleFavPlants} />
+         {/* should the second half be handlePlantSelected */}
+        </div>
       <br></br>
     </>
   );
